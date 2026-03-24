@@ -1,0 +1,287 @@
+h1 {
+  color: rgb(51, 51, 51);
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: rgb(183, 187, 190);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 70px;
+  
+ }
+ /*Hace que el main arrastre al footer*/
+main{
+    flex: 1;
+    z-index: 1;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+header {
+  background-color: rgb(44, 62, 80);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% del alto de la ventana del navegador */
+}
+footer{
+    background-color: rgb(42, 58, 74);
+    color: white;
+    padding: 30px 40px; /* Añadir 20px de espacio en los 2 lados */
+    display: flex;
+    flex-direction: row; /*Mode flex en fila*/ 
+    z-index: 3;
+    justify-content: space-around; /*Reparte exactamente el espacio entre las 3*/ 
+}
+.footer_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido internamente en cada columna */
+    flex: 1; /* Hace que las 3 columnas pesen lo mismo */
+}
+.footer_socialmedia {
+    display: flex;/* Ponemos los iconos en fila */
+    flex-direction: column;
+}
+.footer_icons{
+    display: flex;
+    gap: 15px;/* Espacio entre iconos */
+    margin-top: 10px;
+}
+.footer_links a {
+    color: white;
+}
+.footer_contract{
+    color: white;
+}
+.w3-sidebar{
+  background-color: #1b2e38;  
+  color: white;
+  padding: 20px 10px; 
+  display: flex;
+  flex-direction: column; 
+}
+aside{
+  background-color: #1e293b;  
+  color: rgb(255, 255, 255);
+  padding: 20px 10px; 
+  display: flex;
+  flex-direction: column; 
+}
+/*Boto afegir*/
+/* Posa el títol a un costat i el botó a l'altre */
+.main-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-habitacions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+/* El botó Afegir */
+.dropbtn {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgb(3, 60, 80);
+    background-color: rgb(3, 60, 80);
+    margin-right: 200px;
+}
+
+/* Borrar el punt de llista */
+.menu-add ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Desplegable sota botar afegir */
+.dropdown {
+    position: relative;
+}
+.dropdown-content a {
+  color: #333333;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1; 
+  color: #000000;
+}
+/* La llista desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgb(141, 141, 141);
+    border: 1px solid #ddd;
+    min-width: 150px;
+    z-index: 10;
+}
+
+/* Estil del text de dins del desplegable */
+.dropdown-content li {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* L'acció de mostrar en passar el ratolí */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.boto-perfil {
+  background-color: rgb(45, 179, 41);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid rgb(45, 179, 41);
+  transition: all 0.3s ease;
+}
+/* --- ESTILOS DE LA PÁGINA DE PERFIL (Simplificado) --- */
+
+.perfil-container {
+  max-width: 600px;
+  margin: 40px auto; 
+  padding: 0 20px;
+}
+
+.perfil-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); 
+  border: 1px solid #e2e8f0;
+}
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.perfil-datos h2 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.perfil-datos p {
+  margin: 0;
+  color: #666;
+}
+
+.lista-config {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-config li {
+  margin-bottom: 15px;
+}
+
+.lista-config a {
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
+.habitacio-card {
+  background-color: rgb(223, 223, 223);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); 
+  border: 2px solid #3c3c3c;
+  margin-bottom: 20px;
+  cursor: pointer;      
+  transition: transform 0.3s ease;          
+}
+
+.habitacio-card:hover {
+  transform: scale(1.05);
+  z-index: 10;   
+}
+
+/* ==========================================================================
+   ESTRUCTURA PARA LISTA DE DISPOSITIVOS (Barras alargadas simples)
+   ========================================================================== */
+
+.dispositius-llista {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.dispositiu-barra {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 25px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+    max-width: 85%;         /* Para que no se salga de la pantalla */
+    box-sizing: border-box; /* Fundamental para que el padding no rompa el ancho */
+}
+
+.dispositiu-barra:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #d0d0d0;
+}
+
+.dispositiu-barra .info-principal {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.dispositiu-barra .icono {
+    font-size: 2.2em;
+    margin-right: 25px;
+    width: 40px; 
+    text-align: center;
+}
+
+.dispositiu-barra .info-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.dispositiu-barra .info-texto h3 {
+    margin: 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #333;
+}
+
+.dispositiu-barra .info-texto p {
+    margin: 4px 0 0;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.dispositiu-barra .controles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
