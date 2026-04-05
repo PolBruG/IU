@@ -12,7 +12,7 @@ body {
   margin: 0;
   margin-top: 70px;
  }
- /*Hace que el main arrastre al footer*/
+ /*Fa que el main arrastri al footer*/
 main{
     flex: 1;
     z-index: 1;
@@ -37,7 +37,7 @@ header {
 .wrapper{
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100% del alto de la ventana del navegador */
+    min-height: 100vh; 
 }
 /* ==========================================================================
                                    FOOTER
@@ -47,19 +47,19 @@ footer{
     color: white;
     padding: 20px 20px; /* Añadir 20px de espacio en los 2 lados */
     display: flex;
-    flex-direction: row; /*Mode flex en fila*/ 
+    flex-direction: row; 
     z-index: 3;
     justify-content: space-around; /*Reparte exactamente el espacio entre las 3*/ 
 }
 .footer_section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido internamente en cada columna */
-    flex: 1; /* Hace que las 3 columnas pesen lo mismo */
+    align-items: center; 
+    flex: 1; /* Fa que cada secció ocupi el mateix espai horizontal */
 }
 .footer_socialmedia {
     margin-right: 50px;
-    display: flex;/* Ponemos los iconos en fila */
+    display: flex;/* Icones en fila */
     flex-direction: column;
 }
 .footer_icons{
@@ -74,6 +74,10 @@ footer{
     margin-left: 50px;
     flex-direction: column;
     color: white;
+}
+.footer_icons a {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
 }
 
 /* ==========================================================================
@@ -172,65 +176,173 @@ aside{
 .show {
     display: block !important;
 }
-
-/* ==========================================================================
-                                   PERFIL
-   ========================================================================== */
-.boto-perfil {
-  background-color: rgb(45, 179, 41);
+.afegir {
+  background-color: rgb(3, 60, 80);
   color: white;
   padding: 8px 16px;
   border-radius: 5px;
   font-weight: bold;
-  border: 1px solid rgb(45, 179, 41);
-  transition: all 0.3s ease;
+  border: 1px solid rgb(3, 60, 80);
 }
-/* --- ESTILOS DE LA PÁGINA DE PERFIL (Simplificado) --- */
+/* ==========================================================================
+                                   PERFIL
+   ========================================================================== */
 
-.perfil-container {
-  max-width: 600px;
-  margin: 40px auto; 
-  padding: 0 20px;
-}
-
-.perfil-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08); 
-  border: 2px solid #000000;
-}
-
-.perfil-info {
+   .boto-perfil {
+    background-color: rgb(45, 179, 41);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid rgb(45, 179, 41);
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-perfil {
+    background-color: #1a252f; 
+    width: 260px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    height: 950px;
+  }
+  
+  .perfil-config h3 {
+    font-size: 16px;
+    padding: 0 20px 15px 20px;
+    color: #95a5a6;
+    border-bottom: 1px solid #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .lista-config li a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    transition: background 0.2s;
+  }
+  
+  .lista-config li a:hover {
+    background-color: #2c3e50;
+    border-left: 4px solid #3498db;
+  }
+  
+  .lista-config li.logout a {
+    color: #e74c3c;
+  }
+  
+  .lista-config li.logout a:hover {
+    background-color: #3a2222;
+    border-left: 4px solid #e74c3c;
+  }
+.app-container {
   display: flex;
-  align-items: center;
-  gap: 25px;
+  flex-direction: row;
+  min-height: calc(100vh - 70px);
 }
 
-.perfil-datos h2 {
-  margin: 0 0 5px 0;
-  font-size: 18px;
+/* Donem una amplada fixa a la barra lateral */
+.sidebar-perfil {
+  width: 260px;
+  background-color: #1a252f;
 }
 
-.perfil-datos p {
-  margin: 0;
-  color: #666;
+/* Fem que el contingut principal ocupi tota la resta de l'espai dret */
+.main-content-perfil {
+  flex: 1; /* Fa expandir cap a la dreta */
+  display: flex;
+  justify-content: center; /* Centra la card horitzontalment */
+  align-items: flex-start; /* Col·loca la card a dalt */
+  padding: 80px;
 }
-
-.lista-config {
-  list-style: none;
-  padding: 0;
-}
-
-.lista-config li {
-  margin-bottom: 15px;
-}
-
-.lista-config a {
-  color: rgb(51, 51, 51);
-  font-size: 16px;
-  text-decoration: none;
-}
+  /* Contingut principal del perfil */
+  .main-content-perfil {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .perfil-card {
+    background-color: #f8f9fa; 
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .perfil-imatge {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    margin-bottom: 20px;
+  }
+  
+  .perfil-card h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .perfil-card .correu {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .perfil-detalls {
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  
+  .detall-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .detall-item:last-child {
+    border-bottom: none;
+  }
+  
+  .detall-label {
+    font-weight: bold;
+    color: #34495e;
+  }
+  
+  .detall-valor {
+    color: #555;
+  }
+  
+  .btn-editar {
+    margin-top: 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btn-editar:hover {
+    background-color: #2980b9;
+  }
 
 
 /* ==========================================================================
@@ -259,12 +371,12 @@ aside{
 
 .grid-habitacions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
 }
 
-/* ==========================================================================
-   ESTRUCTURA PARA LISTA DE DISPOSITIVOS (Barras alargadas simples)
-   ========================================================================== */
+/* ========================================
+   ESTRUCTURA DISPOSITIUS
+   =======================================*/
 
 .dispositius-llista {
     margin-top: 20px;

@@ -78,15 +78,22 @@ window.onclick = function(event) {
     }
 }
 		
-function toggleEstat(boto) {	
+function toggleEstat(boto) {
+    let barraDispositiu = boto.closest('.dispositiu-barra');    
+    let icono = barraDispositiu.querySelector('.icono');
+
     if (boto.innerHTML === "ON") {	
         boto.innerHTML = "OFF";
         boto.classList.remove("w3-green");
         boto.classList.add("w3-red");
+        icono.style.opacity = "0.3";
+        icono.style.filter = "grayscale(100%)";
     } else {
         boto.innerHTML = "ON";
         boto.classList.remove("w3-red");
         boto.classList.add("w3-green");
+        icono.style.opacity = "1";
+        icono.style.filter = "grayscale(0%)";
     }
     
 }
